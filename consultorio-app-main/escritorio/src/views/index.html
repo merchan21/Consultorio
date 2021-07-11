@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./css/bootstrap.min.css" />
+      <script
+         src="https://kit.fontawesome.com/421264829b.js"
+         crossorigin="anonymous"
+      ></script>
+      <title>Consultorio Pediatrico</title>
+   </head>
+   <style>
+      .fa-search,
+      .fa-sync-alt {
+         cursor: pointer;
+      }
+   </style>
+   <body>
+      <div class="container py-3">
+         <div class="row">
+            <div class="col-md-3 mb-3">
+               <button class="btn btn-primary rounded-sm" id="btn_form_add_cita">
+                  Añadir nueva cita
+               </button>
+            </div>
+            <div class="col-md-5 mb-3">
+               <div class="input-group rounded">
+                  <input
+                     type="search"
+                     id="search_cita"
+                     class="form-control rounded"
+                     placeholder="Ingrese un número de cédula"
+                     aria-label="Search"
+                     aria-describedby="search-addon"
+                  />
+                  <span class="input-group-text border-0" id="search-addon">
+                     <i class="fas fa-search"></i>
+                  </span>
+               </div>
+            </div>
+            <div class="col-md-2 ml-4">
+               <i class="fas fa-sync-alt mt-3 reload" style="font-size: 25px"></i>
+            </div>
+         </div>
+         <table class="table" id="table">
+            <thead class="lala">
+               <tr>
+                  <th scope="col">No Paciente</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Apellido</th>
+                  <th scope="col">edad</th>
+                  <th scope="col">Acciones</th>
+               </tr>
+            </thead>
+            <tbody id="data"></tbody>
+         </table>
+      </div>
+
+      <script src="./js/app.js"></script>
+   </body>
+</html>

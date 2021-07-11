@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./css/bootstrap.min.css" />
+      <title>Consultorio Pediatrico</title>
+   </head>
+   <body>
+      <div class="container py-4">
+         <div class="row">
+            <div class="col-md-8">
+               <h2 id="nik_paciente" class="mb-0">Alex arcentales</h2>
+            </div>
+            <div class="col-md-4 d-flex justify-content-end con-buttons-actions">
+               <button class="btn btn-info mr-2 rounded-sm btn-edit" type="button">
+                  Editar
+               </button>
+               <button class="btn btn-danger rounded-sm btn-destroy" type="button">
+                  Eliminar
+               </button>
+            </div>
+         </div>
+         <hr />
+         <div class="row">
+            <div class="col-md-5">
+               <h5 class="font-weight-bold">Paciente:</h5>
+               <p class="mb-0 mt-2">Nombres: <span id="nom_paciente"></span></p>
+               <p class="mb-0 mt-2">Apellidos: <span id="ape_paciente"></span></p>
+               <p id="nom_paciente" class="mb-0 mt-2">
+                  Edad: <span id="edad_paciente"></span>
+               </p>
+               <p id="nom_paciente" class="mb-0 mt-2">
+                  CC: <span id="ced_paciente"></span>
+               </p>
+            </div>
+            <div class="col-md-7">
+               <h5 id="nom_paciente" class="mb-0">Descripción General:</h5>
+               <p id="des_paciente">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste ut
+                  pariatur quisquam quidem, rerum dolorem vel aperiam voluptatibus
+                  quibusdam velit.
+               </p>
+            </div>
+         </div>
+         <div class="row mt-4">
+            <div class="col">
+               <h5 id="nom_paciente" class="mb-0 mt-2 font-weight-bold">
+                  Datos del representante:
+               </h5>
+               <p id="nom_paciente" class="mb-0 mt-2">
+                  Nombres: <span id="nom_representante"></span>
+               </p>
+               <p id="nom_paciente" class="mb-0 mt-2">
+                  Apellidos: <span id="ape_representante"></span>
+               </p>
+               <p id="nom_paciente" class="mb-0 mt-2">
+                  CC: <span id="ced_representante"></span>
+               </p>
+               <p id="nom_paciente" class="mb-0 mt-2">
+                  Teléfono: <span id="tel_representante"></span>
+               </p>
+            </div>
+         </div>
+      </div>
+      <script src="./js/app.js"></script>
+   </body>
+</html>

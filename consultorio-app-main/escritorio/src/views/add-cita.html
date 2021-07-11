@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./css/bootstrap.min.css" />
+      <script
+         src="https://kit.fontawesome.com/421264829b.js"
+         crossorigin="anonymous"
+      ></script>
+      <title>Consultorio Pediatrico</title>
+   </head>
+   <style>
+      .form-control[type="number"]::-webkit-inner-spin-button,
+      .form-control[type="number"]::-webkit-outer-spin-button {
+         -webkit-appearance: none;
+         margin: 0;
+      }
+      .form-control[type="number"] {
+         -moz-appearance: textfield;
+      }
+      .fa-times-circle {
+         position: absolute;
+         right: 6%;
+         top: 37%;
+         color: red;
+         display: none;
+      }
+      .fa-check-circle {
+         position: absolute;
+         right: 6%;
+         bottom: 15%;
+         color: green;
+         display: none;
+      }
+      .times-circle-error {
+         display: inline-block;
+      }
+      .check-circle {
+         display: inline-block;
+      }
+   </style>
+   <body>
+      <form id="form_add_cita" class="my-3">
+         <input type="hidden" name="id" id="id" />
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <h5 class="mb-0">Datos del representante:</h5>
+               </div>
+               <div class="col-md-6">
+                  <div class="mt-2">
+                     <label for="ced_representante" class="form-label"
+                        >Cedula del representante</label
+                     >
+                     <input
+                        class="form-control form-control-sm"
+                        type="number"
+                        name="ced_representante"
+                        id="ced_representante"
+                     />
+                     <i class="fas fa-times-circle"></i>
+                     <i class="fas fa-check-circle"></i>
+                  </div>
+                  <p class="text-danger d-none">
+                     La cedula solo puede contener numeros y tienen que ser 10
+                     digitos*
+                  </p>
+               </div>
+               <div class="col-md-6">
+                  <div class="mt-2">
+                     <label for="tel_representante" class="form-label"
+                        >Numero Telefónico</label
+                     >
+                     <input
+                        class="form-control form-control-sm"
+                        type="number"
+                        name="tel_representante"
+                        id="tel_representante"
+                     />
+                     <i class="fas fa-times-circle"></i>
+                     <i class="fas fa-check-circle"></i>
+                  </div>
+                  <p class="text-danger d-none">
+                     El telefono solo puede contener numeros y el maximo son 10
+                     digitos*
+                  </p>
+               </div>
+               <div class="col-md-6">
+                  <div class="mt-2">
+                     <label for="nom_representante" class="form-label"
+                        >Nombre del representante</label
+                     >
+                     <input
+                        class="form-control form-control-sm"
+                        type="text"
+                        name="nom_representante"
+                        id="nom_representante"
+                     />
+                     <i class="fas fa-times-circle"></i>
+                     <i class="fas fa-check-circle"></i>
+                  </div>
+                  <p class="text-danger d-none">
+                     El nombre solo puede contener letras y espacios*
+                  </p>
+               </div>
+               <div class="col-md-6">
+                  <div class="mt-2">
+                     <label for="ape_representante" class="form-label"
+                        >Apellidos del representante</label
+                     >
+                     <input
+                        class="form-control form-control-sm"
+                        type="text"
+                        name="ape_representante"
+                        id="ape_representante"
+                     />
+                     <i class="fas fa-times-circle"></i>
+                     <i class="fas fa-check-circle"></i>
+                  </div>
+                  <p class="text-danger d-none">
+                     El apellido solo puede contener letras y espacios*
+                  </p>
+               </div>
+
+               <div class="col-12 mt-4">
+                  <h5 class="mb-0">Datos del niño:</h5>
+               </div>
+               <div class="col-md-6">
+                  <div class="mt-2">
+                     <label for="ced_paciente" class="form-label"
+                        >Cedula del niño</label
+                     >
+                     <input
+                        class="form-control form-control-sm"
+                        type="number"
+                        name="ced_paciente"
+                        id="ced_paciente"
+                     />
+                     <i class="fas fa-times-circle"></i>
+                     <i class="fas fa-check-circle"></i>
+                  </div>
+                  <p class="text-danger d-none">
+                     La cedula solo puede contener numeros y tiene que ser de 10
+                     digitos*
+                  </p>
+               </div>
+               <div class="col-md-6">
+                  <div class="mt-2">
+                     <label for="edad_paciente" class="form-label"
+                        >Edad del niño</label
+                     >
+                     <input
+                        class="form-control form-control-sm"
+                        type="number"
+                        name="edad_paciente"
+                        id="edad_paciente"
+                     />
+                     <i class="fas fa-times-circle"></i>
+                     <i class="fas fa-check-circle"></i>
+                  </div>
+                  <p class="text-danger d-none">
+                     La edad solo puede contener numeros y como maximo 2 digitos*
+                  </p>
+               </div>
+               <div class="col-md-6">
+                  <div class="mt-2">
+                     <label for="nom_paciente" class="form-label"
+                        >Nombre del niño</label
+                     >
+                     <input
+                        class="form-control form-control-sm"
+                        type="text"
+                        name="nom_paciente"
+                        id="nom_paciente"
+                     />
+                     <i class="fas fa-times-circle"></i>
+                     <i class="fas fa-check-circle"></i>
+                  </div>
+                  <p class="text-danger d-none">
+                     El nombre solo puede contener letras y espacios*
+                  </p>
+               </div>
+               <div class="col-md-6">
+                  <div class="mt-2">
+                     <label for="ape_paciente" class="form-label"
+                        >Apellidos del niño</label
+                     >
+                     <input
+                        class="form-control form-control-sm"
+                        type="text"
+                        name="ape_paciente"
+                        id="ape_paciente"
+                     />
+                     <i class="fas fa-times-circle"></i>
+                     <i class="fas fa-check-circle"></i>
+                  </div>
+                  <p class="text-danger d-none">
+                     El apellido solo puede contener letras y espacios*
+                  </p>
+               </div>
+
+               <div class="col-12">
+                  <div class="mt-2">
+                     <label for="des_paciente" class="form-label"
+                        >Descripción del estado del paciente</label
+                     >
+                     <textarea
+                        name="des_paciente"
+                        id="des_paciente"
+                        class="form-control"
+                        rows="3"
+                     ></textarea>
+                  </div>
+                  <p class="text-danger d-none">
+                     La descripcion no puede exeder de 100 caracteres*
+                  </p>
+               </div>
+               <div class="alert alert-danger col-12 mt-3 d-none" role="alert">
+                  <p>
+                     <i class="fas fa-exclamation-triangle"></i><b>Error: </b>Por
+                     favor rellena el formulario correctamente
+                  </p>
+               </div>
+               <div class="col mt-2">
+                  <button class="btn btn-primary" type="submit" id="btn_add_cita">
+                     Guardar cita
+                  </button>
+               </div>
+            </div>
+         </div>
+      </form>
+      <script src="./js/app.js"></script>
+   </body>
+</html>
